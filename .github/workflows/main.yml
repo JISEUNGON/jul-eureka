@@ -35,7 +35,8 @@ jobs:
 
       - name: CI
         run: |
-          cd ./eureka
+          pwd
+          ls
           ./gradlew bootjar
 
       - name: CD
