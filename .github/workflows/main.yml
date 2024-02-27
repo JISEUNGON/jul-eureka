@@ -40,5 +40,5 @@ jobs:
         run: |
           echo "${{ secrets.KEY }}" > ssh_key 
           chmod 400 ssh_key
-          scp -o "StrictHostKeyChecking no" -P ${{ secretes.SERVER_PORT }} -i ssh_key ./back-end/server/build/libs/*.jar ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/home/julindang/julindang/eureka
-          ssh -i ssh_key -o "StrictHostKeyChecking no" -P ${{ secretes.SERVER_PORT }} ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cd /home/julindang/julindang/eureka && ./run.sh"
+          scp -o "StrictHostKeyChecking no" -P ${{ secrets.SERVER_PORT }} -i ssh_key ./back-end/server/build/libs/*.jar ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/home/julindang/julindang/eureka
+          ssh -i ssh_key -o "StrictHostKeyChecking no" -P ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cd /home/julindang/julindang/eureka && ./run.sh"
