@@ -30,10 +30,12 @@ jobs:
 
       - name : gradlew execution grant
         run: |
+          cd ./eureka
           chmod +x ./gradlew
 
       - name: CI
         run: |
+          cd ./eureka
           ./gradlew bootjar
 
       - name: CD
